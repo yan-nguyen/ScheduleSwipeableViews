@@ -1,0 +1,175 @@
+.moduleDay {
+  width: calc(100% / 7);
+  background-color: #fff;
+  text-align: center;
+}
+
+  .moduleDay__title {
+    font-size: 16px;
+    font-weight: 500;
+    height: 92px;
+    padding: 1rem;
+    border-right: solid 1px #484848;
+    border-bottom: solid 1px #484848;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: pre-line;
+    line-height: 1;
+  }
+
+  .moduleDay__title.blue {
+      background-color: #e8fffe;
+    }
+
+    .moduleDay__title.pink {
+      background-color: #fde8e1;
+    }
+
+.module-title {
+  font-size: 16px;
+  font-weight: 500;
+  height: 92px;
+  padding: 1rem;
+  border-right: solid 1px #484848;
+  border-bottom: solid 1px #484848;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: pre-line;
+  line-height: 0.75;
+}
+.module-hour {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 44px;
+  border-right: solid 1px #c3c3c3;
+  border-bottom: solid 1px #c3c3c3;
+  overflow: hidden;
+}
+
+.module-hour i {
+    font-size: 38px;
+  }
+
+  .module-hour.not-available {
+    background-color: #eee;
+  }
+
+  .module-hour.available button {
+      width: 100%;
+    }
+
+.timetable-toolbar {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+  .timetable-toolbar button .MuiButton-label {
+      display: flex;
+      align-items: center;
+    }
+  .timetable-toolbar button i {
+      font-size: 1rem;
+      margin-right: 8px;
+    }
+  .timetable-toolbar button.MuiButtonBase-root.MuiButton-root.Mui-disabled.Mui-disabled {
+      color: #c6c6c6;
+    }
+  .timetable-toolbar button.btn-next i {
+        margin-right: 0;
+        margin-left: 8px;
+      }
+    
+.timetable-wrapper {
+  border: solid 1px #484848;
+  width: 100%;
+  display: flex;
+}
+
+.moduleDay.header-root {
+  width: 56px;
+  overflow: hidden;
+}
+.moduleDay.header-root .moduleDay__title {
+    background-color: #fff;
+    position: absolute;
+    overflow: hidden;
+    width: 56px;
+  }
+  .moduleDay.header-root .moduleDay__slots {
+    padding-top: 92px;
+  }
+  .moduleDay.header-root .module-hour {
+    border-right: solid 1px #484848;
+    border-bottom: solid 1px #484848;
+  }
+
+.timetable-outer {
+  display: block;
+  white-space: nowrap;
+  width: calc(100% - 56px);
+}
+  .timetable-outer .moduleDay {
+    display: inline-block;
+    width: calc((100% - 5px) / 7);
+  }
+
+.header-day .inner-header-day {
+    display: flex;
+}
+    .header-day .inner-header-day .moduleDay {
+      display: flex;
+    }
+
+    .header-day .inner-header-day .moduleDay:nth-child(7) {
+      width: calc((100% - 5px) / 7 + 5px);
+    }
+  
+.outer-day .inner-outer-day {
+    padding: 1px;
+    margin-top: -1px;
+    margin-left: -1px;
+    background-color: rgba(255,255,255, 0%);
+}
+    .outer-day .inner-outer-day .moduleDay {
+      width: calc(100%  / 7);
+    }
+    .outer-day .inner-outer-day .moduleDay:nth-child(7) {
+      width: calc(100% / 7 + 1px);
+    }
+  
+
+  .react-swipeable-view-container {
+    -webkit-overflow-scrolling: 'touch';
+  }
+    .react-swipeable-view-container > div {
+      overflow: hidden !important;
+    }
+  
+
+@media screen and (min-width: 769px) {
+  .text-month {
+    display: none;
+  }
+  .timetable-outer {
+    width: calc(100% - 92px);
+  }
+  .moduleDay.header-root {
+    width: 92px;
+  }
+  .moduleDay.header-root .moduleDay__title {
+      width: 92px;
+    }
+    .moduleDay.header-root .moduleDay__slots {
+      padding-top: 92px;
+    }
+ 
+  .module-hour {
+    height: 47px;
+  }
+}
